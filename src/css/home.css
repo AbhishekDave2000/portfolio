@@ -1,0 +1,48 @@
+.space-mono-regular {
+    font-family: "Space Mono", monospace;
+    font-weight: 400;
+    font-style: normal;
+}
+body{
+    overflow: hidden;
+    color: white;
+}
+.home-container, .row{
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+}
+.social-media-handles{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+.social-media-handles a{
+    width: fit-content;
+    text-decoration: none;
+    color: white;
+}
+.home-para{
+    font-size: 1.2em;
+}
+
+.carousel-image{
+    width: 150px;
+    height: 150px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.carousel-item{
+    text-align: center;
+}
+
+.carousel-item p {
+    margin-top: 10px;
+    font-size: 1.2em;
+}
+.carousel-inner{
+    width: 60%;
+    align-self: center;
+    margin-left: auto;
+    margin-right: auto;
+}
