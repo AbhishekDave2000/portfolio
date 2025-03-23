@@ -1,0 +1,97 @@
+{
+    "experiences": [
+        {
+            "index": 1,
+            "title": "Software Engineer",
+            "company": "Tatvasoft (Client: BuilderAI/EngineerAI)",
+            "location": "Ahmedabad, India",
+            "duration": "Jan 2022 – Nov 2023",
+            "description": [
+                "Engineered and maintained RESTful APIs for applications, CRM websites, and charging station networks using Ruby on Rails (ROR), optimizing data handling for scalability and efficiency by 60%.",
+                "Optimized SQL and NoSQL databases (PostgreSQL, MongoDB) by implementing indexing & query optimization, reducing retrieval time by 74%.",
+                "Collaborated with cross-functional teams, including front-end developers and UI/UX designers, to integrate back-end services with front-end applications, ensuring seamless data flow and reducing integration issues by 25%.",
+                "Implemented Redis-based caching strategies to collaborate efficiently with front-end teams, reducing API response times by 40% and enhancing system performance for e-vehicle work.",
+                "Effectively communicated complex debugging solutions while troubleshooting and upgrading software, leading to an 80% system performance optimization.",
+                "Created and maintained comprehensive documentation and unit test cases using RSpec, reducing post-release defects by nearly 70% and improving knowledge sharing within the development team."
+            ]
+        },
+        {
+            "index": 2,
+            "title": "Web Developer Intern",
+            "company": "NMR Enterprise",
+            "location": "Vadodara, India",
+            "duration": "May 2021 – June 2021",
+            "description": [
+                "Developed front-end UI using HTML, CSS, Bootstrap, and JavaScript, reducing page load time by 30% and enhancing responsiveness.",
+                "Assembled SPAs using jQuery and AJAX, improving user interaction speed by 40% through content updates without full-page reloads.",
+                "Customized the back-end using PHP and MySQL to meet client-specific requirements, collaborating with the development team to reduce project turnaround time by 30%."
+            ]
+        }
+    ],
+    "education": [
+        {
+            "index": 1,
+            "institution": "Lambton College",
+            "location": "Toronto, ON",
+            "duration": "Jan 2024 - Aug 2025",
+            "degree": "Post Graduate Certificate in Full Stack Software Development",
+            "gpa": "3.52/4.0",
+            "achievements": [
+                "Dean’s Honor List Recipient"
+            ],
+            "relevant_coursework": [
+                "Full-Stack JavaScript",
+                "C#.NET",
+                "Java SE/EE",
+                "Python",
+                "Cloud Computing",
+                "DevOps",
+                "API Development"
+            ]
+        },
+        {
+            "index": 2,
+            "institution": "Sardar Vallabhbhai Patel Institute of Technology",
+            "location": "Vasad, India",
+            "duration": "July 2018 - May 2022",
+            "degree": "Bachelor of Technology in Information Technology",
+            "gpa": "9.51/10.0",
+            "relevant_coursework": [
+                "Data Structures & Algorithms",
+                "Operating Systems",
+                "Computer Networks",
+                "Web Development"
+            ]
+        }
+    ],
+    "projects": [
+        {
+            "index": 1,
+            "name": "Farm Fresh",
+            "technologies": ["HTML", "CSS", "JavaScript"],
+            "description": "Built an e-commerce platform (Farm Fresh) with cart and checkout functionality. Integrated session management using cookies and optimized JSON-based product loading, reducing response time by 30% and leading to a smoother user experience.",
+            "link": "https://github.com/AbhishekDave2000/FarmFresh"
+        },
+        {
+            "index": 2,
+            "name": "Travel Mate",
+            "technologies": ["HTML", "CSS", "JavaScript"],
+            "description": "Designed a travel website (Travel Mate) featuring hotel booking, user reviews, and travel packages, improving accessibility and ease of trip planning.",
+            "link": "https://github.com/AbhishekDave2000/Travelmate"
+        },
+        {
+            "index": 3,
+            "name": "Helperland",
+            "technologies": ["PHP", "jQuery", "JavaScript", "HTML", "CSS", "MySQL", "AJAX"],
+            "description": "Worked on a home cleaning service platform with appointment booking using AJAX for real-time back-end data processing. Reduced booking errors by 80% through form validation and real-time availability checks.",
+            "link": "https://github.com/AbhishekDave2000/Halperhand"
+        },
+        {
+            "index": 4,
+            "name": "Easymeds",
+            "technologies": ["PHP", "HTML", "CSS", "JavaScript"],
+            "description": "Created a healthcare platform that provided information on medicine, expert consultations, and appointment bookings, integrating Google Forms for feedback to enhance patient convenience and user experience.",
+            "link": "https://github.com/AbhishekDave2000/EasyMeds.github.io"
+        }
+    ]
+}

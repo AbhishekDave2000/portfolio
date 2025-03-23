@@ -18,10 +18,10 @@ function Navigation() {
                                 <a className="nav-link" href="/experience"><i className="fa-solid fa-cubes-stacked"></i>Experience</a>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" href="/projects"><i className="fa-solid fa-diagram-project"></i>Projects</a>
+                                <a className="nav-link" href="/education"><i className="fa-solid fa-user-graduate"></i>Education</a>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" href="/education"><i className="fa-solid fa-user-graduate"></i>Education</a>
+                                <a className="nav-link" href="/projects"><i className="fa-solid fa-diagram-project"></i>Projects</a>
                             </li>
                             <li className="nav-item">
                                 <a className="nav-link" href="resume"><i className="fa-regular fa-file-lines"></i>Resume</a>

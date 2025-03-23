@@ -1,24 +1,314 @@
 .space-mono-regular {
-    font-family: "Space Mono", monospace;
-    font-weight: 400;
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
     font-style: normal;
 }
 .page-heading{
-    font-size: 2.5em;
+    font-size: 3em;
     text-align: center;
     padding: 20px;
-    font-weight: 900;
-    letter-spacing: 4px;
+    font-weight: 1000;
+    letter-spacing: 0;
 }
 
-
-/* Skills Page CSS */
-.skills-page-div{
-    flex-direction: row;
+/* Skills Page Designs */
+.skills-heading-div{
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
-.skills-page-div .left-div{
+.line {
     height: 1px;
+    background-color: #3e3e3e; /* Line color */
+}
+
+.left-line{
     width: 20px;
-    background-color: grey;
+}
+
+.right-line{
+    flex: 1;
+}
+
+.skill-name-heading{
+    white-space: nowrap;
+    font-size: 1.3em;
+    /* font-weight: bold; */
+    display: inline-block !important;
+    margin-bottom: 0;
+    color: #3e3e3e;
+}
+
+.skills-main-container{
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.skills-listing-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.skills{
+    min-width: 95%;
+    margin: 10px;
+    position: relative;
+    text-decoration: none;
+    color: white;
+    border-radius: 1.3em;
+    padding: 1.2em 2.2em;
+    border: 1px solid #272727;
+    background-repeat: no-repeat;
+    background-size: 50%;
+    background-position: 110%;
+}
+
+.skills:hover{
+    text-decoration: none !important;
+    color: white;
+}
+
+.skills::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Black overlay with 50% opacity */
+    z-index: 5; /* Place it above the background image */
+    pointer-events: none; /* Ensure it doesn’t block interactions */
+}
+
+.skill-name{
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+/* ==============> Styles for the image background of each skills <======================= */
+.ruby-skills-image{ background-image: linear-gradient(to right, black 25%, transparent 80%), url(../assets/img/ruby.svg);}
+.php-skills-image{ background-image: linear-gradient(to right, black 25%, transparent 80%), url(../assets/img/php.png);}
+.python-skills-image{ background-image: linear-gradient(to right, black 25%, transparent 80%), url(../assets/img/python.png);}
+.java-skills-image{ background-image: linear-gradient(to right, black 25%, transparent 80%), url(../assets/img/java.png);}
+.js-skills-image{ background-image: linear-gradient(to right, black 25%, transparent 80%), url(../assets/img/JavaScript.png);}
+.c-sharp-skills-image{ background-image: linear-gradient(to right, black 25%, transparent 80%), url(../assets/img/CSharp.png);}
+.html-skills-image{ background-image: linear-gradient(to right, black 25%, transparent 80%), url(../assets/img/html.svg);}
+.css-skills-image{ background-image: linear-gradient(to right, black 25%, transparent 80%), url(../assets/img/css.svg);}
+.rails-skills-image{ background-image: linear-gradient(to right, black 25%, transparent 80%), url(../assets/img/rails.svg);}
+.asp-skills-image{ background-image: linear-gradient(to right, black 25%, transparent 80%), url(../assets/img/asp.png);}
+.react-skills-image{ background-image: linear-gradient(to right, black 25%, transparent 80%), url(../assets/img/react.svg);}
+.node-skills-image{ background-image: linear-gradient(to right, black 25%, transparent 80%), url(../assets/img/node.svg);}
+.express-skills-image{ background-image: linear-gradient(to right, black 25%, transparent 60%), url(../assets/img/express.svg);}
+.jQuery-skills-image{ background-image: linear-gradient(to right, black 25%, transparent 80%), url(../assets/img/jquery.svg);}
+.mysql-skills-image{ background-image: linear-gradient(to right, black 20%, transparent 40%), url(../assets/img/mySQL.svg); }
+.mssql-skills-image{ background-image: linear-gradient(to right, black 25%, transparent 80%), url(../assets/img/msSQl.svg); }
+.postgres-skills-image{ background-image: linear-gradient(to right, black 25%, transparent 80%), url(../assets/img/postgres.svg); }
+.mongo-skills-image{ background-image: linear-gradient(to right, black 25%, transparent 80%), url(../assets/img/mongo.svg); }
+.redis-skills-image{ background-image: linear-gradient(to right, black 25%, transparent 80%), url(../assets/img/redis.svg); }
+
+
+
+/* =======================> Experience Section <=========================== */
+.experience-container{
+    position: relative;
+    width: 90%;
+    margin: 50px auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.timeline{
+    position: absolute;
+    left: 0;
+    background-color: white;
+    height: 100%;
+    width: 1px;
+    transform: translateX(50%);
+}
+
+.experience-item{
+    border: 1px solid #272727;
+    margin: 20px 10px;
+    padding: 1em;
+    border-radius: 1.5em;
+    background: #000000;
+    box-shadow: 0 0 0 rgba(72, 72, 72, 0.6);
+    position: relative;
+    height: max-content;
+    box-sizing: unset;
+    text-decoration: none;
+    color: white;
+}
+
+.experience-item:hover{
+    box-shadow: -5px -5px 5px rgba(72, 72, 72, 0.6);
+    color: white;
+}
+
+.content{
+    height: max-content;
+}
+
+.experience-item::before{
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 15px;
+    height: 15px;
+    background: white;
+    border-radius: 50%;
+    transform: translateY(-50%);
+}
+
+.left::before, .right::before{
+    left: -16px;
+}
+
+
+/* =======================> Education Section <============================ */
+.content .coursework-container .dots{
+    display: flex;
+}
+.content:hover .coursework-container .dots{
+    display: none;
+}
+
+.content .coursework-container .coursework{
+    max-height: 0; /* Initially hidden */
+    overflow: hidden;
+    opacity: 0;
+    visibility: hidden;
+    transition: max-height 1s ease-in-out, opacity 1s ease-in-out, visibility 1s ease-in-out;
+}
+
+
+.content:hover .coursework-container .coursework{
+    max-height: fit-content; /* Adjust based on content */
+    opacity: 1;
+    visibility: visible;
+}
+
+/* =======================> Project Section <=========================== */
+.project-container{
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    text-decoration: none;
+    color: white;
+}
+.project-container:hover{
+    color: white;
+}
+
+.project{
+    flex-direction: column;
+    border: 1px solid #272727;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+}
+
+.project-heading{
+    border-bottom: 1px solid #272727;
+    padding-bottom: .5em;
+    margin-bottom: 1.5em;
+    font-size: 1.3em;
+}
+
+.project{
+    transition: box-shadow 200ms ease-in-out;
+}
+
+.project:hover{
+    box-shadow: -5px -5px 7px #3e3e3e;
+}
+
+
+
+/* =======================> Media Query For Responsive Design <=========================== */
+@media (min-width: 767px) {
+    /* Styles for tablets */
+    .skills{
+        min-width: unset;
+        width: 290px;
+    }
+
+    .timeline{
+        left: 50%;
+    }
+
+    .experience-container{
+        width: 80%;
+    }
+
+    .experience-item{
+        width: 45%;
+    }
+
+    .left {
+        align-self: flex-start;
+        text-align: left;
+        margin-right: auto; /* Push it to the left */
+        transform: translateX(-20px);
+    }
+    
+    .right {
+        align-self: flex-end;
+        text-align: left;
+        margin-left: auto; /* Push it to the right */
+        transform: translateX(20px);
+    }
+
+    .left::before {
+        right: -12px;
+        left: auto;
+    }
+    
+    .right::before {
+        left: -12px;
+        right: auto;
+    }
+
+    .experience-item .content .content-section {
+        max-height: 0; /* Initially hidden */
+        overflow: hidden;
+        opacity: 0;
+        visibility: hidden;
+        transition: max-height 1s ease-in-out, opacity 1s ease-in-out, visibility 1s ease-in-out;
+    }
+    
+    .experience-item:hover .content .content-section {
+        max-height: fit-content; /* Adjust based on content */
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .project-container{
+        width: 80%;
+        flex-wrap: wrap;
+    }
+    
+    .project{
+        flex-direction: column;
+        max-width: 350px;
+        margin-bottom: 2em;
+        border-radius: 1em;
+        transition: box-shadow 300ms ease-in-out;
+    }
+}
+
+
+@media (min-width: 993px) {
+    /* Styles for desktops */
+    .skills{
+        width: 280px;
+    }
+    .skills-listing-container{
+        justify-content: left;
+    }
 }
