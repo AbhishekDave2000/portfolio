@@ -21,7 +21,7 @@ const Navbar = () => {
                 <NavLink to="/experience" className={({isActive}) => isActive ? ACTIVE_STYLE : IN_ACTIVE_STYLE}>
                     Experience
                 </NavLink>
-                <NavLink to="/contact" className={({isActive}) => isActive ? ACTIVE_STYLE : IN_ACTIVE_STYLE}>
+                <NavLink to="/contact-us" className={({isActive}) => isActive ? ACTIVE_STYLE : IN_ACTIVE_STYLE}>
                     Contact
                 </NavLink>
             </div>

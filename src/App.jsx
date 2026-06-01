@@ -1,6 +1,8 @@
-// import { BrowserRouter, Routes, Route, Link  } from 'react-router-dom';
-import { BrowserRouter, Routes, Route, Link } from 'react-router-dom'
-import HomePage from './pages/HomePage'
+import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
+import HomePage from './pages/HomePage';
+import AboutPage from './pages/AboutPage';
+import ExperiencePage from './pages/ExperiencePage';
+import ContactPage from './pages/ContactPage';
 import './App.css'
 
 function App() {
@@ -8,7 +10,10 @@ function App() {
     <>
       <BrowserRouter>
         <Routes>
-          <Route path='/' element={ <HomePage /> }></Route>
+          <Route path='/' element={ <HomePage /> } />
+          <Route path='/about' element={ <AboutPage /> } />
+          <Route path='/experience' element={ <ContactPage /> } />
+          <Route path='/contact-us' element={ <ExperiencePage /> } />
 
           <Route path='*' element={ <HomePage /> } replace></Route>
         </Routes>
