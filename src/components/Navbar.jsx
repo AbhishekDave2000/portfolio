@@ -1,29 +1,49 @@
-import { NavLink, Link, useNavigate } from 'react-router-dom';
+// import { NavLink, Link, useNavigate } from 'react-router-dom';
+import { useState } from 'react';
+import { FaLinkedin, FaGithub, FaInstagram } from 'react-icons/fa'
 
 const ACTIVE_STYLE = "font-medium border-b-2 border-amber-400" 
 const IN_ACTIVE_STYLE = "font-light text-amber-100" 
 
 const Navbar = () => {
+    const [active, setActive] = useState("hero");
+
+    const handleClick = (section) => {
+        setActive(section);
+        document.getElementById(section).scrollIntoView({ behavior: 'smooth' });
+    }
+
     return(
-        <div className='bg-gray-950 flex item-center justify-between gap-2 w-full sticky top-0 px-6 py-3 outline-none border-b-2 border-gray-900'>
+        <div className='bg-gray-950 flex item-center justify-between w-full sticky top-0 px-6 py-3 outline-none border-b-2 border-gray-900'>
             <div>
-                <NavLink to="/" className='text-2xl font-medium text-amber-300 flex-1'>
+                <span onClick={() => handleClick("hero")} className='text-2xl font-medium text-amber-300 flex-1'>
                     Abhishek Dave
-                </NavLink>
+                </span>
             </div>
-            <div className='flex item-center justify-between gap-4 flex-wrap text-lg'>
-                <NavLink to="/" className={({isActive}) => isActive ? ACTIVE_STYLE : IN_ACTIVE_STYLE}>
+            <div className='flex flex-nowrap item-center justify-between gap-4 text-md'>
+                <button onClick={() => handleClick("hero")} className={active === "hero" ? ACTIVE_STYLE : IN_ACTIVE_STYLE}>
                     Home
-                </NavLink>
-                <NavLink to="/about" className={({isActive}) => isActive ? ACTIVE_STYLE : IN_ACTIVE_STYLE}>
+                </button>
+                <button onClick={() => handleClick("about")} className={active === "about" ? ACTIVE_STYLE : IN_ACTIVE_STYLE}>
                     About
-                </NavLink>
-                <NavLink to="/experience" className={({isActive}) => isActive ? ACTIVE_STYLE : IN_ACTIVE_STYLE}>
+                </button>
+                <button onClick={() => handleClick("experience")} className={active === "experience" ? ACTIVE_STYLE : IN_ACTIVE_STYLE}>
                     Experience
-                </NavLink>
-                <NavLink to="/contact-us" className={({isActive}) => isActive ? ACTIVE_STYLE : IN_ACTIVE_STYLE}>
+                </button>
+                <button onClick={() => handleClick("contact")} className={active === "contact" ? ACTIVE_STYLE : IN_ACTIVE_STYLE}>
                     Contact
-                </NavLink>
+                </button>
+            </div>
+            <div className="flex gap-4 items-center">
+                <a href="https://www.linkedin.com/in/abhishek-dave-15b3711a4/" target="_blank">
+                    <FaLinkedin className="text-amber-400 text-2xl hover:text-amber-300 cursor-pointer" />
+                </a>
+                <a href="https://github.com/AbhishekDave2000" target="_blank">
+                    <FaGithub className="text-amber-400 text-2xl hover:text-amber-300 cursor-pointer" />
+                </a>
+                <a href="https://www.instagram.com/__abhi2208__/" target="_blank">
+                    <FaInstagram className="text-amber-400 text-2xl hover:text-amber-300 cursor-pointer" />
+                </a>
             </div>
         </div>
     )
