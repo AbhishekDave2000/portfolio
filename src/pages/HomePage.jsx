@@ -6,9 +6,9 @@ const HomePage = () => {
             {/* Navigation Bar */}
             <Navbar />
 
-            {/* Header Section */}
-            <div className="flex flex-col items-start justify-center w-full max-w-5xl h-auto mx-auto tracking-wide px-5 mt-20 mb-5">
-                <marquee  className="w-80 font-light text-3xl text-amber-300 mb-1 animate-pulse">Full Stack Software Developer</marquee >
+            {/* Hero Section */}
+            <section id="hero" className="flex flex-col items-start justify-center w-full max-w-5xl h-auto mx-auto tracking-wide px-5 mt-20 mb-5">
+                <marquee className="w-80 font-light text-3xl text-amber-300 mb-1">Full Stack Software Developer</marquee >
                 <div className="font-semibold text-6xl text-white">
                     {"<Abhishek />"}
                 </div>
@@ -23,14 +23,33 @@ const HomePage = () => {
                     <button className="bg-white font-semibold text-black px-4 py-1 rounded-lg hover:bg-amber-200 cursor-pointer">View Projects</button>
                     <button className="bg-white font-semibold text-black px-4 py-1 rounded-lg hover:bg-amber-200 cursor-pointer">Contact</button>
                 </div>
-            </div>
+            </section>
             
             <hr className="text-gray-800" />
             
-            {/*  */}
-            <div className="flex flex-col item-center justify-center mt-5">
+            {/* About Section */}
+            <section id="about" className="flex item-center justify-center mt-5 w-full max-w-5xl mx-auto border-gray-100 border">
+                <h2 className="text-white font-stretch-semi-condensed text-4xl">About Me</h2>
+                {/* Left About Section */}
+                <div>
+                    
+                </div>
 
-            </div>
+                {/* Right About Section */}
+                <div>
+
+                </div>
+            </section>
+
+            {/* Experience Section */}
+            <section id="experience" className="flex item-center justify-center mt-5 w-full max-w-5xl mx-auto">
+                <h2 className="text-white font-stretch-semi-condensed text-4xl">Experience</h2>
+            </section>
+
+            {/* Contact */}
+            <section id="contact" className="flex item-center justify-center mt-5 w-full max-w-5xl mx-auto">
+                <h2 className="text-white font-stretch-semi-condensed text-4xl">Contact</h2>
+            </section>
         </>
     )
 }
