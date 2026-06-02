@@ -14,7 +14,7 @@ const Navbar = () => {
     }
 
     return(
-        <div className='bg-gray-950 flex item-center justify-between w-full sticky top-0 px-6 py-3 outline-none border-b-2 border-gray-900'>
+        <div className='bg-gray-950 flex item-center justify-between w-full sticky top-0 px-6 py-3 outline-none border-b-2 border-gray-900 z-10'>
             <div>
                 <span onClick={() => handleClick("hero")} className='text-2xl font-medium text-amber-300 flex-1 cursor-pointer'>
                     Abhishek Dave
