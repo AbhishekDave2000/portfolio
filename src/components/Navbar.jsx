@@ -2,8 +2,8 @@
 import { useState } from 'react';
 import { FaLinkedin, FaGithub, FaInstagram } from 'react-icons/fa'
 
-const ACTIVE_STYLE = "font-medium border-b-2 border-amber-400" 
-const IN_ACTIVE_STYLE = "font-light text-amber-100" 
+const ACTIVE_STYLE = "font-medium border-b-2 hover:text-amber-300 border-amber-400 cursor-pointer" 
+const IN_ACTIVE_STYLE = "font-light text-amber-100 hover:text-amber-300 cursor-pointer" 
 
 const Navbar = () => {
     const [active, setActive] = useState("hero");
@@ -16,7 +16,7 @@ const Navbar = () => {
     return(
         <div className='bg-gray-950 flex item-center justify-between w-full sticky top-0 px-6 py-3 outline-none border-b-2 border-gray-900'>
             <div>
-                <span onClick={() => handleClick("hero")} className='text-2xl font-medium text-amber-300 flex-1'>
+                <span onClick={() => handleClick("hero")} className='text-2xl font-medium text-amber-300 flex-1 cursor-pointer'>
                     Abhishek Dave
                 </span>
             </div>
