@@ -1,4 +1,9 @@
 import Navbar from "../components/Navbar";
+import SectionHeading from '../components/SectionHeading';
+import StateCard from "../components/StateCard";
+import SkillsRow from "../components/SkillsRow";
+import { skills } from "../data/skills";
+import { BsJavascript } from "react-icons/bs";
 
 const HomePage = () => {
     return(
@@ -28,55 +33,56 @@ const HomePage = () => {
             <hr className="text-gray-900" />
             
             {/* About Section */}
-            <section id="about" className="flex item-center justify-center w-full max-w-5xl mx-auto py-16">
-                {/* <h2 className="text-white font-stretch-semi-condensed text-4xl">About Me</h2> */}
-                {/* Left About Section */}
+            <section id="about" className="flex flex-col item-center justify-center w-full max-w-5xl mx-auto py-16">
+                <SectionHeading number="01" heading="ABOUT ME" />
                 <div className="flex flex-row gap-4">
+                    {/* Left About Section */}
                     <div className="basis-3/5">
-                        <p className="font-stretch-condensed font-bold text-4xl">01 - ABOUT ME</p>
-                        <div className="w-16 h-px bg-amber-400 text-xl font-light mb-4 mt-0.5"></div>
+                        <h2 className="text-amber-200 text-6xl py-2">Who I Am</h2>
                         <div className="font-light text-2xl">
                             Full-stack Ruby on Rails Developer with 3+ years building cloud-native, scalable web applications in Agile/DevOps environments.
                             Proven experience delivering production Rails services with CI/CD pipelines, Redis, PostgreSQL, and RESTful APIs. Comfortable
                             owning features end-to-end across iterative sprints.
                         </div>
                     </div>
+
+                    {/* Right About Section */}
                     <div className="basis-2/5 grid grid-cols-2 gap-6">
-                        <div className="border border-amber-200 p-2 flex flex-col items-center justify-center rounded-lg shadow-amber-200 shadow-md transition-all duration-300 hover:-translate-y-2 hover:border-gray-200 hover:text-amber-200 hover:shadow-white">
-                            <span className="text-4xl font-bold">3 +</span>
-                            <span>Years Experience</span>
-                        </div>
-                        <div className="border border-amber-200 p-2 flex flex-col items-center justify-center rounded-lg shadow-amber-200 shadow-md transition-all duration-300 hover:-translate-y-2 hover:border-gray-200 hover:text-amber-200 hover:shadow-white">
-                            <span className="text-4xl font-bold">15 +</span>
-                            <span>Production Features</span>
-                        </div>
-                        <div className="border border-amber-200 p-2 flex flex-col items-center justify-center rounded-lg shadow-amber-200 shadow-md transition-all duration-300 hover:-translate-y-2 hover:border-gray-200 hover:text-amber-200 hover:shadow-white">
-                            <span className="text-4xl font-bold">10000 +</span>
-                            <span>User Impected</span>
-                        </div>
-                        <div className="border border-amber-200 p-2 flex flex-col items-center justify-center rounded-lg shadow-amber-200 shadow-md transition-all duration-300 hover:-translate-y-2 hover:border-gray-200 hover:text-amber-200 hover:shadow-white">
-                            <span className="text-4xl font-bold">100%</span>
-                            <span>Test Coverage</span>
-                        </div>
+                        <StateCard value="3 +" label="Years Experience" />
+                        <StateCard value="15 +" label="Production Features" />
+                        <StateCard value="10000 +" label="User Impected" />
+                        <StateCard value="100%" label="Test Coverage" />
                     </div>
-                </div>
-
-                {/* Right About Section */}
-                <div >
-
                 </div>
             </section>
 
             <hr className="text-gray-900" />
 
+            {/* Skills Section */}
+            <section id="skills" className="flex flex-col item-center justify-center mt-5 w-full max-w-5xl mx-auto py-16">
+                <SectionHeading number="02" heading="SKILLS" />
+                <div className="flex flex-col gap-4">
+                    <SkillsRow heading="LANGUAGES" skillType="primary" skills={skills.languages} />
+                    <SkillsRow heading="FRAMEWORKS & LIBRARIES" skillType="secondary" skills={skills.frameworks} />
+                    <SkillsRow heading="DATABASES" skillType="secondary" skills={skills.databases} />
+                    <SkillsRow heading="TOOLS & TECHNOLOGIES" skillType="secondary" skills={skills.tools} />
+                    <SkillsRow heading="METHODOLOGIES" skillType="secondary" skills={skills.methods} />
+                </div>
+            </section>
+
             {/* Experience Section */}
-            <section id="experience" className="flex item-center justify-center mt-5 w-full max-w-5xl mx-auto">
-                <h2 className="text-white font-stretch-semi-condensed text-4xl">Experience</h2>
+            <section id="experience" className="flex flex-col item-center justify-center mt-5 w-full max-w-5xl mx-auto">
+                <SectionHeading number="03" heading="EXPERIENCE" />
+            </section>
+
+            {/* Education Section */}
+            <section id="education" className="flex flex-col item-center justify-center mt-5 w-full max-w-5xl mx-auto">
+                <SectionHeading number="04" heading="EDUCATION" />
             </section>
 
             {/* Contact */}
-            <section id="contact" className="flex item-center justify-center mt-5 w-full max-w-5xl mx-auto">
-                <h2 className="text-white font-stretch-semi-condensed text-4xl">Contact</h2>
+            <section id="contact" className="flex flex-col item-center justify-center mt-5 w-full max-w-5xl mx-auto mb-5">
+                <SectionHeading number="05" heading="CONTACT" />
             </section>
         </>
     )
