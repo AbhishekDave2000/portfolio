@@ -2,7 +2,9 @@ import Navbar from "../components/Navbar";
 import SectionHeading from '../components/SectionHeading';
 import StateCard from "../components/StateCard";
 import SkillsRow from "../components/SkillsRow";
+import ExperienceCard from "../components/ExperienceCard";
 import { skills } from "../data/skills";
+import { experiences } from "../data/experience";
 import { BsJavascript } from "react-icons/bs";
 
 const HomePage = () => {
@@ -73,6 +75,8 @@ const HomePage = () => {
             {/* Experience Section */}
             <section id="experience" className="flex flex-col item-center justify-center mt-5 w-full max-w-5xl mx-auto">
                 <SectionHeading number="03" heading="EXPERIENCE" />
+
+                {experiences.map((exp) => <ExperienceCard key={exp.id} exp={exp} />)}
             </section>
 
             {/* Education Section */}
