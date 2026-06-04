@@ -27,8 +27,14 @@ const Navbar = () => {
                 <button onClick={() => handleClick("about")} className={active === "about" ? ACTIVE_STYLE : IN_ACTIVE_STYLE}>
                     About
                 </button>
+                <button onClick={() => handleClick("skills")} className={active === "skills" ? ACTIVE_STYLE : IN_ACTIVE_STYLE}>
+                    Skills
+                </button>
                 <button onClick={() => handleClick("experience")} className={active === "experience" ? ACTIVE_STYLE : IN_ACTIVE_STYLE}>
                     Experience
+                </button>
+                <button onClick={() => handleClick("education")} className={active === "education" ? ACTIVE_STYLE : IN_ACTIVE_STYLE}>
+                    Education
                 </button>
                 <button onClick={() => handleClick("contact")} className={active === "contact" ? ACTIVE_STYLE : IN_ACTIVE_STYLE}>
                     Contact
