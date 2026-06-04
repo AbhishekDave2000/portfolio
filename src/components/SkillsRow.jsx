@@ -1,5 +1,4 @@
-const PRIMARY_SKILLS    = "text-xl text-zinc-700 px-2 py-1 rounded-lg bg-amber-200";
-const SECONDARY_SKILLS  = "text-xl text-amber-100 px-2 py-1 rounded-lg border border-amber-200";
+import SkillTag from "./SkillTag";
 
 const SkillsRow = ({heading, skillType, skills}) => {
     return(
@@ -9,7 +8,7 @@ const SkillsRow = ({heading, skillType, skills}) => {
             </div>
             <div className="flex flex-row flex-wrap gap-2 item-center col-span-2">
                 {skills.map((skill) => 
-                    <span className={skillType === "primary" ? PRIMARY_SKILLS : SECONDARY_SKILLS}>{skill}</span>
+                    <SkillTag key={skill} skill={skill} skillType={skillType}/>
                 )}
             </div>
         </div>
