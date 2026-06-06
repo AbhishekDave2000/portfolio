@@ -3,6 +3,8 @@ import SectionHeading from '../components/SectionHeading';
 import StateCard from "../components/StateCard";
 import SkillsRow from "../components/SkillsRow";
 import ExperienceCard from "../components/ExperienceCard";
+import ContactForm from "../components/ContactForm";
+import ContactInfo from "../components/ContactInfo";
 import { skills } from "../data/skills";
 import { experiences } from "../data/experience";
 import { education } from "../data/education";
@@ -95,6 +97,12 @@ const HomePage = () => {
             {/* Contact */}
             <section id="contact" className="flex flex-col item-center justify-center my-5 pt-20 pb-10 w-full max-w-5xl mx-auto mb-5">
                 <SectionHeading number="05" heading="CONTACT" />
+                <div className="max-w-7xl mx-auto mt-5">
+                    <div className="grid grid-cols-2 gap-8">
+                        <ContactForm />
+                        <ContactInfo />
+                    </div>
+                </div>
             </section>
         </>
     )
