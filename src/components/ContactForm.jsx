@@ -24,18 +24,25 @@ const ContactForm = () => {
             
             {/* Header Section */}
             <div className='mb-10'>
-                <div className='flex items-center gap-4'>
-                    <div className=" h-14 w-14 rounded-xl border border-amber-400/30 flex items-center justify-center text-amber-400">
-                        <MdOutlineEmail size={28}/>
+                <div className='flex gap-4'>
+                    <div className="h-14 w-14 flex items-center justify-center text-amber-400 font-extralight">
+                        <MdOutlineEmail size={60} />
                     </div>
 
                     <div>
-                        <h2 className="text-4xl font-bold text-white">
+                        <h2 className="text-4xl font-light text-white">
                             Let's Work Together
                         </h2>
+                        {/* <div className="flex gap-2 items-center">
+                            <div className="h-0.5 w-20 bg-linear-to-r from-amber-500 to-amber-900"></div>
+                            <div className="h-1 w-1 rounded-full bg-amber-500"></div>
+                        </div> */}
 
                         <p className="text-zinc-400 mt-2">
                             Have a project in mind or want to collaborate?
+                        </p>
+                        <p className="text-zinc-400 mt-2">
+                            I'd love to hear from you.
                         </p>
                     </div>
                 </div>
