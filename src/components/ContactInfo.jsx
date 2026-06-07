@@ -12,7 +12,7 @@ import { GoShieldCheck } from "react-icons/go";
 
 const ContactInfo = () => {
     return(
-        <div className="flex flex-col gap-4 py-10 px-10 border border-zinc-700 rounded-2xl">
+        <div className="flex flex-col gap-4 py-10 px-10 border border-amber-950 rounded-2xl">
             {/* Header Section */}
             <div className="flex flex-row item-center gap-3">
                 <IoPersonOutline size={40} className="mt-1.5"/>
@@ -69,7 +69,7 @@ const ContactInfo = () => {
                     </div>
                     <div className="flex flex-col font-light">
                         <span>Resume</span>
-                        <a href="" className="text-emerald-400">Download My Resume</a>
+                        <a href="/Abhishek_Dave.pdf" target="_blank" rel="noopener noreferrer" className="text-emerald-400">Download My Resume</a>
                     </div>
                 </div>
             </div>

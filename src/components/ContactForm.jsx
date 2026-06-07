@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { MdOutlineEmail } from "react-icons/md";
+import { MdOutlineMail } from "react-icons/md";
 
 const ContactForm = () => {
     const [loading, setLoading] = useState(false);
@@ -16,27 +16,27 @@ const ContactForm = () => {
     }
 
     const handleClick = () => {
-        alert("Form is Submitted");
+        window.alert("Form is Submitted");
     }
 
     return(
-        <div className='bg-zinc-900/50 border border-amber-800 backdrop-blur-2xl rounded-2xl py-10 px-10'>
+        <div className='bg-zinc-950 border border-amber-950 backdrop-blur-2xl rounded-2xl py-10 px-10'>
             
             {/* Header Section */}
             <div className='mb-10'>
                 <div className='flex gap-4'>
-                    <div className="h-14 w-14 flex items-center justify-center text-amber-400 font-extralight">
-                        <MdOutlineEmail size={60} />
+                    <div className="h-14 w-14 flex items-center justify-center text-amber-400 font-light">
+                        <MdOutlineMail size={50}/>
                     </div>
 
                     <div>
                         <h2 className="text-4xl font-light text-white">
                             Let's Work Together
                         </h2>
-                        {/* <div className="flex gap-2 items-center">
+                        <div className="flex gap-2 items-center">
                             <div className="h-0.5 w-20 bg-linear-to-r from-amber-500 to-amber-900"></div>
                             <div className="h-1 w-1 rounded-full bg-amber-500"></div>
-                        </div> */}
+                        </div>
 
                         <p className="text-zinc-400 mt-2">
                             Have a project in mind or want to collaborate?
@@ -50,7 +50,7 @@ const ContactForm = () => {
 
             {/* Form Section */}
             <div className='flex flex-col gap-1.5'>
-                <label className='text-zinc-300 col-span-1 text-xl font-light mt-2'>Name</label>
+                <label className='text-zinc-400 col-span-1 text-lg font-light mt-2'>Name</label>
                 <input 
                     type="text" 
                     name="name"
@@ -62,7 +62,7 @@ const ContactForm = () => {
             </div>
 
             <div className='flex flex-col gap-1.5'>
-                <label className='text-zinc-300 col-span-1 text-xl font-light mt-2'>Email</label>
+                <label className='text-zinc-400 col-span-1 text-lg font-light mt-2'>Email</label>
                 <input 
                     type="email" 
                     name="email"
@@ -74,7 +74,7 @@ const ContactForm = () => {
             </div>
 
             <div className='flex flex-col gap-1.5'>
-                <label className='text-zinc-300 col-span-1 text-xl font-light mt-2'>Subject</label>
+                <label className='text-zinc-400 col-span-1 text-lg font-light mt-2'>Subject</label>
                 <input 
                     type="text" 
                     name="subject"
@@ -86,7 +86,7 @@ const ContactForm = () => {
             </div>
 
             <div className='flex flex-col gap-1.5'>
-                <label className='text-zinc-300 col-span-1 text-xl font-light mt-2'>Message</label>
+                <label className='text-zinc-400 col-span-1 text-lg font-light mt-2'>Message</label>
                 <textarea 
                     name="message" 
                     value={form.note}
@@ -96,7 +96,7 @@ const ContactForm = () => {
                 />
             </div>
             <button 
-                className='bg-amber-500 text-zinc-700 font-semibold text-xl rounded-xl mt-2 px-12 py-2 cursor-pointer'
+                className='border border-amber-700 text-zinc-400 hover:bg-amber-600 hover:text-zinc-200 font-semibold text-xl rounded-xl mt-2 px-12 py-2 cursor-pointer'
                 onClick={() => handleClick}>
                 {loading ? "Loading" : "Submit" }
             </button>
