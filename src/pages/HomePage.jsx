@@ -1,6 +1,6 @@
 import Navbar from "../components/Navbar";
 import SectionHeading from '../components/SectionHeading';
-import StateCard from "../components/StateCard";
+import AboutSection from "../components/AboutSection";
 import SkillsRow from "../components/SkillsRow";
 import ExperienceCard from "../components/ExperienceCard";
 import ContactForm from "../components/ContactForm";
@@ -31,8 +31,24 @@ const HomePage = () => {
                 </div>
 
                 <div className="flex gap-4 mt-5 tracking-tight">
-                    <button className="bg-zinc-200 font-semibold text-black px-3 py-1.5 rounded-xl hover:bg-amber-200 transition duration-400 hover:shadow-sm hover:shadow-amber-200 cursor-pointer">View Projects</button>
-                    <button className="bg-zinc-200 font-semibold text-black px-3 py-1.5 rounded-xl hover:bg-amber-200 transition duration-400 hover:shadow-sm hover:shadow-amber-200 cursor-pointer">Resume</button>
+                    <a 
+                        href="https://github.com/AbhishekDave2000" 
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="bg-zinc-950 font-semibold text-amber-100 border border-amber-800 px-3 py-1.5 rounded-xl hover:bg-amber-300 hover:text-zinc-700 hover:border hover:border-amber-300 transition duration-400 hover:shadow-amber-300 cursor-pointer"
+                    >
+                        View Projects
+                    </a>
+                    <a 
+                        href="/Abhishek_Dave.pdf" 
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="bg-zinc-950 font-semibold text-amber-100 border border-amber-800 px-3 py-1.5 rounded-xl hover:bg-amber-300 hover:text-zinc-700 hover:border hover:border-amber-300 transition duration-400 hover:shadow-amber-300 cursor-pointer"
+                    >
+                        Resume
+                    </a>
+                    {/* <button className="bg-zinc-950 font-semibold text-amber-100 border border-zinc-700 px-3 py-1.5 rounded-xl hover:border-0 hover:bg-amber-300 hover:text-zinc-400 transition duration-400 hover:shadow-amber-300 cursor-pointer">View Projects</button>
+                    <button className="bg-zinc-950 font-semibold text-amber-100 border border-zinc-700 px-3 py-1.5 rounded-xl hover:border-0 hover:bg-amber-300 hover:text-zinc-400 transition duration-400 hover:shadow-amber-300 cursor-pointer">Resume</button> */}
                 </div>
             </section>
             
@@ -41,25 +57,7 @@ const HomePage = () => {
             {/* About Section */}
             <section id="about" className="flex flex-col item-center justify-center w-full max-w-5xl mx-auto my-5 pt-20 pb-10">
                 <SectionHeading number="01" heading="ABOUT ME" />
-                <div className="flex flex-row gap-4">
-                    {/* Left About Section */}
-                    <div className="basis-3/5">
-                        <h2 className="text-amber-200 text-6xl py-2">Who I Am</h2>
-                        <div className="font-light text-2xl">
-                            Full-stack Ruby on Rails Developer with 3+ years building cloud-native, scalable web applications in Agile/DevOps environments.
-                            Proven experience delivering production Rails services with CI/CD pipelines, Redis, PostgreSQL, and RESTful APIs. Comfortable
-                            owning features end-to-end across iterative sprints.
-                        </div>
-                    </div>
-
-                    {/* Right About Section */}
-                    <div className="basis-2/5 grid grid-cols-2 gap-6">
-                        <StateCard value="3 +" label="Years Experience" />
-                        <StateCard value="15 +" label="Production Features" />
-                        <StateCard value="10000 +" label="User Impected" />
-                        <StateCard value="100%" label="Test Coverage" />
-                    </div>
-                </div>
+                <AboutSection />
             </section>
 
             <hr className="text-gray-900" />
