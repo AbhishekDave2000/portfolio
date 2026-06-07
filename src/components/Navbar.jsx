@@ -17,7 +17,7 @@ const Navbar = () => {
         <div className='bg-gray-950 flex item-center justify-between w-full sticky top-0 px-6 py-3 outline-none border-b-2 border-gray-900 z-10'>
             <div>
                 <span onClick={() => handleClick("hero")} className='text-2xl font-medium text-amber-300 flex-1 cursor-pointer'>
-                    Abhishek Dave
+                    AMD
                 </span>
             </div>
             <div className='flex flex-nowrap item-center justify-between gap-4 text-md'>
@@ -42,13 +42,13 @@ const Navbar = () => {
             </div>
             <div className="flex gap-4 items-center">
                 <a href="https://www.linkedin.com/in/abhishek-dave-15b3711a4/" target="_blank">
-                    <FaLinkedin className="text-amber-400 text-2xl hover:text-amber-300 cursor-pointer" />
+                    <FaLinkedin className="text-blue-400 text-2xl hover:text-blue-600 cursor-pointer" />
                 </a>
                 <a href="https://github.com/AbhishekDave2000" target="_blank">
-                    <FaGithub className="text-amber-400 text-2xl hover:text-amber-300 cursor-pointer" />
+                    <FaGithub className="text-zinc-400 text-2xl hover:text-zinc-200 cursor-pointer" />
                 </a>
                 <a href="https://www.instagram.com/__abhi2208__/" target="_blank">
-                    <FaInstagram className="text-amber-400 text-2xl hover:text-amber-300 cursor-pointer" />
+                    <FaInstagram className="text-red-400 text-2xl hover:text-red-600 cursor-pointer" />
                 </a>
             </div>
         </div>
