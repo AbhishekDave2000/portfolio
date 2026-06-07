@@ -1,6 +1,8 @@
 // import { NavLink, Link, useNavigate } from 'react-router-dom';
 import { useState } from 'react';
-import { FaLinkedin, FaGithub, FaInstagram } from 'react-icons/fa'
+import ThemeSwitcher from './ThemeSwitcher';
+import { FaLinkedin, FaGithub, FaInstagram } from 'react-icons/fa';
+import { useTheme } from '../context/ThemeContext';
 
 const ACTIVE_STYLE = "font-medium border-b-2 hover:text-amber-300 border-amber-400 cursor-pointer" 
 const IN_ACTIVE_STYLE = "font-light text-amber-100 hover:text-amber-300 cursor-pointer" 
@@ -40,7 +42,8 @@ const Navbar = () => {
                     Contact
                 </button>
             </div>
-            <div className="flex gap-4 items-center">
+            <ThemeSwitcher />
+            {/* <div className="flex gap-4 items-center">
                 <a href="https://www.linkedin.com/in/abhishek-dave-15b3711a4/" target="_blank">
                     <FaLinkedin className="text-blue-400 text-2xl hover:text-blue-600 cursor-pointer" />
                 </a>
@@ -50,7 +53,7 @@ const Navbar = () => {
                 <a href="https://www.instagram.com/__abhi2208__/" target="_blank">
                     <FaInstagram className="text-red-400 text-2xl hover:text-red-600 cursor-pointer" />
                 </a>
-            </div>
+            </div> */}
         </div>
     )
 }
