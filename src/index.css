@@ -1,11 +1,14 @@
 @import "tailwindcss";
 
 @source inline("{text,bg,border,shadow}-{amber,emerald,red,cyan,purple}-{100,200,300,400,500,600,700,800,900,950}");
-@source inline("hover:{text,bg,border}-{amber,emerald,red,cyan,purple}-{100,200,300,400,500,600,700,800,900,950}");
+@source inline("hover:{text,bg,border,shadow}-{amber,emerald,red,cyan,purple}-{100,200,300,400,500,600,700,800,900,950}");
 @source inline("bg-{amber,emerald,red,cyan,purple}-500/10");
-@source inline("shadow-{amber,emerald,red,cyan,purple}-500/20");
+@source inline("hover:shadow-{amber,emerald,red,cyan,purple}-500/20");
 @source inline("from-{amber,emerald,red,cyan,purple}-{100,200,300,400,500,600,700,800,900,950}");
 @source inline("to-{amber,emerald,red,cyan,purple}-{100,200,300,400,500,600,700,800,900,950}");
+@source inline("ring-{amber,emerald,red,cyan,purple}-{100,200,300,400,500,600,700,800,900,950}");
+@source inline("ring-{amber,emerald,red,cyan,purple}-500/10 ring-{amber,emerald,red,cyan,purple}-500/20 ring-{amber,emerald,red,cyan,purple}-500/30");
+@source inline("from-{amber,emerald,red,cyan,purple}-500/30");
 
 :root {
     --bg:         #080808;
