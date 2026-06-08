@@ -2,13 +2,16 @@ import StateCard from "./StateCard";
 import { FaCode, FaNetworkWired  } from "react-icons/fa6";
 import { FaUsers } from "react-icons/fa";
 import { SiAdguard } from "react-icons/si";
+import { useColor } from '../context/ThemeContext';
 
 const AboutSection = () => {
+    const { c, color } = useColor();
+
     return(
         <div className="flex flex-row gap-4">
             {/* Left About Section */}
             <div className="basis-3/5">
-                <h2 className="text-amber-200 text-6xl py-2">Who I Am</h2>
+                <h2 className={`text-${c(200)} text-6xl py-2`}>Who I Am</h2>
                 <div className="font-light text-2xl">
                     Full-stack Ruby on Rails Developer with 3+ years building cloud-native, scalable web applications in Agile/DevOps environments.
                     Proven experience delivering production Rails services with CI/CD pipelines, Redis, PostgreSQL, and RESTful APIs. Comfortable

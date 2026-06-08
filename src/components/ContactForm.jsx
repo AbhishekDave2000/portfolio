@@ -1,7 +1,10 @@
 import { useState } from 'react';
 import { MdOutlineMail } from "react-icons/md";
+import { useColor } from '../context/ThemeContext';
 
 const ContactForm = () => {
+    const { c, color } = useColor();
+
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState("");
     const [form, setForm] = useState({
@@ -20,12 +23,12 @@ const ContactForm = () => {
     }
 
     return(
-        <div className='bg-zinc-950 border border-amber-950 backdrop-blur-2xl rounded-2xl py-10 px-10'>
+        <div className={`bg-zinc-950 border border-${c(950)} backdrop-blur-2xl rounded-2xl py-10 px-10`}>
             
             {/* Header Section */}
             <div className='mb-10'>
                 <div className='flex gap-4'>
-                    <div className="h-14 w-14 flex items-center justify-center text-amber-400 font-light">
+                    <div className={`h-14 w-14 flex items-center justify-center text-${c(400)} font-light`}>
                         <MdOutlineMail size={50}/>
                     </div>
 
@@ -34,8 +37,8 @@ const ContactForm = () => {
                             Let's Work Together
                         </h2>
                         <div className="flex gap-2 items-center">
-                            <div className="h-0.5 w-20 bg-linear-to-r from-amber-500 to-amber-900"></div>
-                            <div className="h-1 w-1 rounded-full bg-amber-500"></div>
+                            <div className={`h-0.5 w-20 bg-linear-to-r from-${c(500)} to-${c(900)}`}></div>
+                            <div className={`h-1 w-1 rounded-full bg-${c(500)}`}></div>
                         </div>
 
                         <p className="text-zinc-400 mt-2">
@@ -96,7 +99,7 @@ const ContactForm = () => {
                 />
             </div>
             <button 
-                className='border border-amber-700 text-zinc-400 hover:bg-amber-600 hover:text-zinc-200 font-semibold text-xl rounded-xl mt-2 px-12 py-2 cursor-pointer'
+                className={`border border-${c(700)} text-zinc-400 hover:bg-${c(600)} hover:text-zinc-200 font-semibold text-xl rounded-xl mt-2 px-12 py-2 cursor-pointer`}
                 onClick={() => handleClick}>
                 {loading ? "Loading" : "Submit" }
             </button>

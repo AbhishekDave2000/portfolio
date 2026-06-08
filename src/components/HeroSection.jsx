@@ -1,14 +1,17 @@
 import { FaLinkedin, FaGithub, FaInstagram } from 'react-icons/fa'
 import { IoDocumentText } from "react-icons/io5";
+import { useColor } from '../context/ThemeContext';
 
 const HeroSection = () => {
+    const { c, color } = useColor();
+
     return(
         <>
-            <span className="max-w-fit font-light text-3xl text-amber-300 mb-1 animate-bounce">Full Stack Software Developer</span >
+            <span className={`max-w-fit font-light text-3xl text-${c(300)} mb-1 animate-bounce`}>Full Stack Software Developer</span >
             <div className="font-semibold text-7xl text-white">
                 {"<Abhishek />"}
             </div>
-            <div className="font-light text-lg text-amber-200 mb-3">
+            <div className={`font-light text-lg text-${c(200)} mb-3`}>
                 Ruby on Rails • React • Node.js | Building scalable Applications, Microservice Architecture, APIs, and cloud-native solutions.
             </div>
             {/* <div className="flex gap-4 mt-5 tracking-tight">

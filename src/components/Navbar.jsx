@@ -2,13 +2,14 @@
 import { useState } from 'react';
 import ThemeSwitcher from './ThemeSwitcher';
 import { FaLinkedin, FaGithub, FaInstagram } from 'react-icons/fa';
-import { useTheme } from '../context/ThemeContext';
-
-const ACTIVE_STYLE = "font-medium border-b-2 hover:text-amber-300 border-amber-400 cursor-pointer" 
-const IN_ACTIVE_STYLE = "font-light text-amber-100 hover:text-amber-300 cursor-pointer" 
+import { useColor } from '../context/ThemeContext';
 
 const Navbar = () => {
     const [active, setActive] = useState("hero");
+    const { c, color } = useColor();
+
+    const ACTIVE_STYLE = `font-medium border-b-2 text-${c(100)} hover:text-${c(400)} border-${c(600)} cursor-pointer` 
+    const IN_ACTIVE_STYLE = `font-light text-${c(400)} hover:text-${c(600)} cursor-pointer` 
 
     const handleClick = (section) => {
         setActive(section);
@@ -18,7 +19,7 @@ const Navbar = () => {
     return(
         <div className='bg-gray-950 flex item-center justify-between w-full sticky top-0 px-6 py-3 outline-none border-b-2 border-gray-900 z-10'>
             <div>
-                <span onClick={() => handleClick("hero")} className='text-2xl font-medium text-amber-300 flex-1 cursor-pointer'>
+                <span onClick={() => handleClick("hero")} className={`text-2xl font-medium text-${c(400)} flex-1 cursor-pointer`}>
                     AMD
                 </span>
             </div>
