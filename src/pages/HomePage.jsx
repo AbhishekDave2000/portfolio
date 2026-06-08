@@ -47,7 +47,7 @@ const HomePage = () => {
             {/* Experience Section */}
             <section id="experience" className="flex flex-col item-center justify-center my-5 pt-20 pb-10 w-full max-w-5xl mx-auto">
                 <SectionHeading number="03" heading="EXPERIENCE" />
-                {experiences.map((exp) => <ExperienceCard key={exp.id} exp={exp} />)}
+                {experiences.map((exp, index) => <ExperienceCard key={exp.id} exp={exp} isLast={index === experiences.length - 1} />)}
             </section>
             <hr className="text-gray-900" />
 
