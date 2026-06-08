@@ -8,5 +8,11 @@ export default defineConfig({
     react(),
     tailwindcss(),
   ],
+  css: {
+    transformer: 'postcss', 
+  },
+  build: {
+    cssMinify: false, 
+  },
   base: "/",
 })
