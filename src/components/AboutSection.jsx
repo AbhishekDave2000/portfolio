@@ -11,7 +11,7 @@ const AboutSection = () => {
         <div className="flex flex-row gap-4">
             {/* Left About Section */}
             <div className="basis-3/5">
-                <h2 className={`text-${c(200)} text-6xl py-2`}>Who I Am</h2>
+                <h2 className={`text-${c(200)} text-5xl py-2`}>Who I Am</h2>
                 <div className="font-light text-2xl">
                     Full-stack Ruby on Rails Developer with 3+ years building cloud-native, scalable web applications in Agile/DevOps environments.
                     Proven experience delivering production Rails services with CI/CD pipelines, Redis, PostgreSQL, and RESTful APIs. Comfortable

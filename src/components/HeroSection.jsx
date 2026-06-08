@@ -1,18 +1,35 @@
 import { FaLinkedin, FaGithub, FaInstagram } from 'react-icons/fa'
 import { IoDocumentText } from "react-icons/io5";
 import { useColor } from '../context/ThemeContext';
+import { TypeAnimation } from 'react-type-animation';
 
 const HeroSection = () => {
     const { c, color } = useColor();
 
     return(
         <>
-            <span className={`max-w-fit font-light text-3xl text-${c(300)} mb-1 animate-bounce`}>Full Stack Software Developer</span >
+            {/* <span className={`max-w-fit font-light text-3xl text-${c(300)} mb-1 animate-bounce`}>Full Stack Software Developer</span > */}
             <div className="font-semibold text-7xl text-white">
                 {"<Abhishek />"}
             </div>
+            <span className={`text-${c(300)}`}>
+                <TypeAnimation
+                    sequence={[
+                        'Full Stack Developer', 
+                        2000,                      
+                        'Ruby on Rails Engineer', 
+                        2000,
+                        'React Developer',
+                        2000,
+                    ]}
+                    speed={60}        
+                    deletionSpeed={30} 
+                    repeat={Infinity}
+                    className={`font-mono text-3xl tracking-normal mt-2`}
+                />
+            </span>
             <div className={`font-light text-lg text-${c(200)} mb-3`}>
-                Ruby on Rails • React • Node.js | Building scalable Applications, Microservice Architecture, APIs, and cloud-native solutions.
+                Building scalable web applications, robust backend systems, and intuitive user experiences using modern technologies and industry best practices.
             </div>
             {/* <div className="flex gap-4 mt-5 tracking-tight">
                 <a 

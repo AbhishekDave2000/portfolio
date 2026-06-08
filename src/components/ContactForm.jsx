@@ -58,7 +58,7 @@ const ContactForm = () => {
                     type="text" 
                     name="name"
                     value={form.name}
-                    onChange={() => handleChange}
+                    onChange={handleChange}
                     placeholder='Your Name'
                     className='border border-zinc-800 rounded-lg text-zinc-400 col-span-3 w-full p-2 mb-5'
                 />
@@ -70,7 +70,7 @@ const ContactForm = () => {
                     type="email" 
                     name="email"
                     value={form.email}
-                    onChange={() => handleChange}
+                    onChange={handleChange}
                     placeholder='Your Email'
                     className='border border-zinc-800 rounded-lg text-zinc-400 col-span-3 w-full p-2 mb-5'
                 />
@@ -82,7 +82,7 @@ const ContactForm = () => {
                     type="text" 
                     name="subject"
                     value={form.subject}
-                    onChange={() => handleChange}
+                    onChange={handleChange}
                     placeholder='Subject' 
                     className='border border-zinc-800 rounded-lg text-zinc-400 col-span-3 w-full p-2 mb-5'
                 />
@@ -92,8 +92,8 @@ const ContactForm = () => {
                 <label className='text-zinc-400 col-span-1 text-lg font-light mt-2'>Message</label>
                 <textarea 
                     name="message" 
-                    value={form.note}
-                    onChange={() => handleChange}
+                    value={form.message}
+                    onChange={handleChange}
                     placeholder='Your Message'
                     className='border border-zinc-800 rounded-lg text-zinc-400 col-span-3 w-full p-2 mb-5'
                 />
