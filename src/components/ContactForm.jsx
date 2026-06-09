@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import { MdOutlineMail } from "react-icons/md";
 import { useColor } from '../context/ThemeContext';
+const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbz6lVg7KYu5rW-opK8KdDm5UFh6yoq6bBTei78cDri1_kVzkD5fhfZsu9KiZ2VhY8WZfQ/exec"
+import { toast } from "react-hot-toast";
 
 const ContactForm = () => {
     const { c, color } = useColor();
@@ -18,8 +20,26 @@ const ContactForm = () => {
         setForm( {...form, [e.target.name]: e.target.value} );
     }
 
-    const handleClick = () => {
-        window.alert("Form is Submitted");
+    const handleSubmit = async () => {
+        if(!form.name || !form.email || !form.message) return;
+
+        setLoading(true);
+
+        try{
+            await fetch(GOOGLE_SCRIPT_URL, {
+                method: "POST",
+                mode: "no-cors", // ← required for Google Scripts
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(form),
+            });
+
+            setForm({name: "", email: "", subject: "", message: ""});
+            toast.success("Message sent successfully.")
+        } catch (err) {
+            toast.error("Something went wrong, please try again.");
+        } finally{
+            setLoading(false);
+        }
     }
 
     return(
@@ -100,7 +120,7 @@ const ContactForm = () => {
             </div>
             <button 
                 className={`border border-${c(700)} text-zinc-400 hover:bg-${c(600)} hover:text-zinc-200 font-semibold text-xl rounded-xl mt-2 px-12 py-2 cursor-pointer`}
-                onClick={() => handleClick}>
+                onClick={handleSubmit}>
                 {loading ? "Loading" : "Submit" }
             </button>
         </div>
