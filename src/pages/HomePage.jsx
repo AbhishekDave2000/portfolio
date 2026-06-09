@@ -11,12 +11,16 @@ import { experiences } from "../data/experience";
 import { education } from "../data/education";
 import { BsJavascript } from "react-icons/bs";
 import EducationCard from "../components/EducationCard";
+import ScrollUpButton from "../components/ScrollUpButton";
 
 const HomePage = () => {
     return(
         <>
             {/* Navigation Bar */}
             <Navbar />
+
+            {/* Scroll Top button */}
+            <ScrollUpButton />
 
             {/* Hero Section */}
             <section id="hero" className="flex flex-col items-start justify-center w-full max-w-5xl h-auto mx-auto tracking-wide px-5 my-5 pt-20 pb-10">

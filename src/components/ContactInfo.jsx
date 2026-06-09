@@ -72,7 +72,7 @@ const ContactInfo = () => {
                     </div>
                     <div className="flex flex-col font-light">
                         <span>Resume</span>
-                        <a href="/Abhishek_Dave.pdf" target="_blank" rel="noopener noreferrer" className="text-emerald-400">Download My Resume</a>
+                        <a href="/Abhishek_Dave.pdf" target="_blank" rel="noopener noreferrer" className="text-emerald-400">Download Resume</a>
                     </div>
                 </div>
             </div>
