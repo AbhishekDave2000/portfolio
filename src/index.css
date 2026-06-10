@@ -8,6 +8,7 @@
 @source inline("ring-{amber,emerald,red,cyan,purple}-{100,200,300,400,500,600,700,800,900,950}");
 @source inline("ring-{amber,emerald,red,cyan,purple}-500/10 ring-{amber,emerald,red,cyan,purple}-500/20 ring-{amber,emerald,red,cyan,purple}-500/30");
 @source inline("from-{amber,emerald,red,cyan,purple}-500/30");
+@source inline("via-{zinc,amber,emerald,red,cyan,purple}-{400,500,600,700,800}");
 
 :root {
     --bg:         #080808;

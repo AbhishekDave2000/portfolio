@@ -36,6 +36,9 @@ const Navbar = () => {
                 <button onClick={() => handleClick("experience")} className={active === "experience" ? ACTIVE_STYLE : IN_ACTIVE_STYLE}>
                     Experience
                 </button>
+                <button onClick={() => handleClick("projects")} className={active === "projects" ? ACTIVE_STYLE : IN_ACTIVE_STYLE}>
+                    Projects
+                </button>
                 <button onClick={() => handleClick("education")} className={active === "education" ? ACTIVE_STYLE : IN_ACTIVE_STYLE}>
                     Education
                 </button>
@@ -44,17 +47,6 @@ const Navbar = () => {
                 </button>
             </div>
             <ThemeSwitcher />
-            {/* <div className="flex gap-4 items-center">
-                <a href="https://www.linkedin.com/in/abhishek-dave-15b3711a4/" target="_blank">
-                    <FaLinkedin className="text-blue-400 text-2xl hover:text-blue-600 cursor-pointer" />
-                </a>
-                <a href="https://github.com/AbhishekDave2000" target="_blank">
-                    <FaGithub className="text-zinc-400 text-2xl hover:text-zinc-200 cursor-pointer" />
-                </a>
-                <a href="https://www.instagram.com/__abhi2208__/" target="_blank">
-                    <FaInstagram className="text-red-400 text-2xl hover:text-red-600 cursor-pointer" />
-                </a>
-            </div> */}
         </div>
     )
 }
