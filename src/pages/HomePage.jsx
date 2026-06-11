@@ -80,8 +80,8 @@ const HomePage = () => {
             {/* Contact */}
             <section id="contact" className="flex flex-col item-center justify-center py-20 w-full max-w-5xl mx-auto mb-5">
                 <SectionHeading number="06" heading="CONTACT" />
-                <div className="max-w-7xl mx-auto mt-5">
-                    <div className="grid grid-cols-2 gap-8">
+                <div className="md:max-w-7xl md:mx-auto md:mt-5">
+                    <div className="md:grid md:grid-cols-2 md:gap-8">
                         <ContactForm />
                         <ContactInfo />
                     </div>

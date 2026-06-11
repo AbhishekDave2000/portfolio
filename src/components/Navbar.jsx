@@ -5,48 +5,72 @@ import { FaLinkedin, FaGithub, FaInstagram } from 'react-icons/fa';
 import { useColor } from '../context/ThemeContext';
 
 const Navbar = () => {
-    const [active, setActive] = useState("hero");
-    const { c, color } = useColor();
+    const [active, setActive]       = useState("hero");
+    const [menuOpen, setMenuOpen]   = useState(false)
+    const { c, color }              = useColor();
 
     const ACTIVE_STYLE = `font-medium border-b-2 text-${c(100)} hover:text-${c(400)} border-${c(600)} cursor-pointer` 
     const IN_ACTIVE_STYLE = `font-light text-${c(400)} hover:text-${c(600)} cursor-pointer` 
 
+    const NAV_ITEMS = [
+        "hero", "about", "skills",
+        "experience", "projects",
+        "education", "contact"
+    ]
+
     const handleClick = (section) => {
         setActive(section);
+        setMenuOpen(false)
         document.getElementById(section).scrollIntoView({ behavior: 'smooth' });
     }
 
     return(
-        <div className='bg-gray-950 flex item-center justify-between w-full sticky top-0 px-6 py-3 outline-none border-b-2 border-gray-900 z-10'>
-            <div>
-                <span onClick={() => handleClick("hero")} className={`text-2xl font-medium text-${c(400)} flex-1 cursor-pointer`}>
+        <div className={`bg-gray-950 flex item-center justify-between w-full h-18 overflow-visible sticky top-0 px-6 py-3 outline-none border-b-2 border-gray-900 z-10 ${menuOpen && 'h-dvh items-start'}`}>
+            <div className='flex flex-row items-center justify-between px-6 py-3 w-full'>
+                
+                <span onClick={() => handleClick("hero")} className={`text-2xl font-medium text-${c(400)} cursor-pointer`}>
                     AMD
                 </span>
+                
+                <div className='hidden md:flex flex-nowrap item-center gap-4 text-md'>
+                    {NAV_ITEMS.map((item) => (
+                        <button
+                            key={item}
+                            onClick={() => handleClick(item)}
+                            className={active === item ? ACTIVE_STYLE : IN_ACTIVE_STYLE}
+                        >
+                            {item.charAt(0).toUpperCase() + item.slice(1)}
+                        </button>
+                    ))}
+                </div>
+                
+                <div className="flex items-center justify-between gap-3">
+                    <ThemeSwitcher />
+
+                    {/* Hamburger — only on mobile */}
+                    <button
+                        onClick={() => setMenuOpen(!menuOpen)}
+                        className={`md:hidden flex flex-col gap-1.5 cursor-pointer`}
+                    >
+                        <span className={`block w-6 h-0.5 bg-${c(400)} transition-all duration-300 ${menuOpen ? "rotate-45 translate-y-2" : ""}`} />
+                        <span className={`block w-6 h-0.5 bg-${c(400)} transition-all duration-300 ${menuOpen ? "opacity-0" : ""}`} />
+                        <span className={`block w-6 h-0.5 bg-${c(400)} transition-all duration-300 ${menuOpen ? "-rotate-45 -translate-y-2" : ""}`} />
+                    </button>
+                </div>
             </div>
-            <div className='flex flex-nowrap item-center justify-between gap-4 text-md'>
-                <button onClick={() => handleClick("hero")} className={active === "hero" ? ACTIVE_STYLE : IN_ACTIVE_STYLE}>
-                    Home
-                </button>
-                <button onClick={() => handleClick("about")} className={active === "about" ? ACTIVE_STYLE : IN_ACTIVE_STYLE}>
-                    About
-                </button>
-                <button onClick={() => handleClick("skills")} className={active === "skills" ? ACTIVE_STYLE : IN_ACTIVE_STYLE}>
-                    Skills
-                </button>
-                <button onClick={() => handleClick("experience")} className={active === "experience" ? ACTIVE_STYLE : IN_ACTIVE_STYLE}>
-                    Experience
-                </button>
-                <button onClick={() => handleClick("projects")} className={active === "projects" ? ACTIVE_STYLE : IN_ACTIVE_STYLE}>
-                    Projects
-                </button>
-                <button onClick={() => handleClick("education")} className={active === "education" ? ACTIVE_STYLE : IN_ACTIVE_STYLE}>
-                    Education
-                </button>
-                <button onClick={() => handleClick("contact")} className={active === "contact" ? ACTIVE_STYLE : IN_ACTIVE_STYLE}>
-                    Contact
-                </button>
-            </div>
-            <ThemeSwitcher />
+            {menuOpen && (
+                <div className={`md:hidden flex flex-col items-start px-6 pb-4 gap-3 min-h-full border-t border-gray-900`}>
+                    {NAV_ITEMS.map((item) => (
+                        <button
+                            key={item}
+                            onClick={() => handleClick(item)}
+                            className={`text-left py-1 ${active === item ? ACTIVE_STYLE : IN_ACTIVE_STYLE}`}
+                        >
+                            {item.charAt(0).toUpperCase() + item.slice(1)}
+                        </button>
+                    ))}
+                </div>
+            )}
         </div>
     )
 }
