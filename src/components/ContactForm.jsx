@@ -43,7 +43,7 @@ const ContactForm = () => {
     }
 
     return(
-        <div className={`bg-zinc-950 border border-${c(950)} backdrop-blur-2xl rounded-2xl py-10 px-10`}>
+        <div className={`bg-zinc-950 border border-${c(950)} backdrop-blur-2xl rounded-2xl py-10 px-10 my-4 md:my-0`}>
             
             {/* Header Section */}
             <div className='mb-10'>
