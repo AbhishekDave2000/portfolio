@@ -14,10 +14,10 @@ const boxCss = {
 
 const StateCard = ({value, label, elementLabel, style}) => {
     return(
-        <div className={`border py-5 flex flex-col items-center justify-center rounded-lg shadow-md transition-all duration-300 hover:-translate-y-2 ${boxCss[style]}`}>
+        <div className={`border px-0.5 py-5 flex flex-col items-center justify-center rounded-lg shadow-md transition-all duration-300 hover:-translate-y-2 ${boxCss[style]}`}>
             <span className={ colorMapCss[style] } >{ elementLabel }</span>
-            <span className={`text-3xl font-bold ${colorMapCss[style]}`}>{value}</span>
-            <span className="text-md">{label}</span>
+            <span className={`text-xl sm:text-3xl font-bold ${colorMapCss[style]}`}>{value}</span>
+            <span className="text-xs sm:text-md">{label}</span>
         </div>
     )
 }
