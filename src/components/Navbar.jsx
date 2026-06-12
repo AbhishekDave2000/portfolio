@@ -25,7 +25,7 @@ const Navbar = () => {
     }
 
     return(
-        <div className={`bg-gray-950 flex item-center justify-between w-full h-18 overflow-visible sticky top-0 px-6 py-3 outline-none border-b-2 border-gray-900 z-10 ${menuOpen && 'h-dvh items-start'}`}>
+        <div className={`bg-gray-950 relative flex md:item-center justify-between w-full h-18 overflow-visible sticky top-0 px-6 py-3 outline-none border-b-2 border-gray-900 z-10 ${menuOpen && 'h-dvh items-start'}`}>
             <div className='flex flex-row items-center justify-between px-6 py-3 w-full'>
                 
                 <span onClick={() => handleClick("hero")} className={`text-2xl font-medium text-${c(400)} cursor-pointer`}>
@@ -57,9 +57,11 @@ const Navbar = () => {
                         <span className={`block w-6 h-0.5 bg-${c(400)} transition-all duration-300 ${menuOpen ? "-rotate-45 -translate-y-2" : ""}`} />
                     </button>
                 </div>
+
+                
             </div>
             {menuOpen && (
-                <div className={`md:hidden flex flex-col items-start px-6 pb-4 gap-3 min-h-full border-t border-gray-900`}>
+                <div className={`md:hidden flex flex-col items-start px-6 pb-4 gap-3 min-h-full border-t border-gray-900 absolute top-15 right-0`}>
                     {NAV_ITEMS.map((item) => (
                         <button
                             key={item}
