@@ -42,7 +42,7 @@ const HomePage = () => {
             {/* Skills Section */}
             <section id="skills" className="flex flex-col item-center justify-center py-20 w-full max-w-5xl mx-auto">
                 <SectionHeading number="02" heading="SKILLS" />
-                <div className="flex flex-col gap-4">
+                <div className="flex flex-col gap-4 w-4/5 md:w-full md:px-10 lg:px-0 mx-auto">
                     <SkillsRow heading="LANGUAGES" skillType="primary" skills={skills.languages} />
                     <SkillsRow heading="FRAMEWORKS & LIBRARIES" skillType="secondary" skills={skills.frameworks} />
                     <SkillsRow heading="DATABASES" skillType="secondary" skills={skills.databases} />
