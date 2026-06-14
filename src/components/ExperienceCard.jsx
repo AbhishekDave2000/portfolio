@@ -5,7 +5,7 @@ const ExperienceCard = ({exp, isLast}) => {
     const { c } = useColor();
 
     return(
-        <div className="flex gap-6 pl-5">
+        <div className="flex gap-6 pl-1 md:pl-5 mx-auto w-11/12 sm:w-4/5 md:w-full">
             {/* Side Section Line */}
             <div className="flex flex-col items-center">
                 <div className={`relative flex items-center justify-center w-5 h-5 rounded-full bg-${c(500)} ring-6 ring-${c(500)}/30 mt-2 shrink-0`}>
@@ -23,15 +23,15 @@ const ExperienceCard = ({exp, isLast}) => {
                 </span>
 
                 {/* Job Title & Position */}
-                <h2 className={`text-3xl text-${c(300)}`}>{exp.role}</h2>
+                <h2 className={`text-lg md:text-3xl text-${c(300)}`}>{exp.role}</h2>
                 
                 {/* Location & Duration */}
                 <p className="flex gap-2 text-xl items-center"> 
-                    <span className={`text-md text-${c(200)}`}>
+                    <span className={`text-sm md:text-md text-${c(200)}`}>
                         {exp.company}
                     </span>
                     <span className="text-zinc-600 text-4xl text-center">•</span>
-                    <span className={`text-md`}>
+                    <span className={`text-sm md:text-md`}>
                         {exp.location}
                     </span>
                 </p>
@@ -39,11 +39,11 @@ const ExperienceCard = ({exp, isLast}) => {
                 {/* Divider */}
                 <div className={`h-px w-full bg-linear-to-r from-${c(500)}/30 to-transparent mb-4`}></div>
 
-                <div className="flex flex-col gap-2 pl-6 text-lg">
+                <div className="flex flex-col gap-2 pl-2 md:pl-6">
                     {exp.points.map((point, index) => (
-                        <div key={index} className="flex gap-3 items-start">
+                        <div key={index} className="flex gap-1 md:gap-3 items-start">
                             <span className={`text-${c(400)} mt-1 shrink-0 text-sm`}>▹</span>
-                            <span className="text-zinc-300 text-base leading-relaxed">{point}</span>
+                            <span className="text-zinc-300 text-sm md:text-lg leading-relaxed">{point}</span>
                         </div>
                     ))} 
                 </div>
