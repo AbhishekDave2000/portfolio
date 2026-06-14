@@ -15,7 +15,7 @@ const ContactInfo = () => {
     const { c } = useColor();
 
     return(
-        <div className={`flex flex-col gap-4 py-10 px-10 border border-${c(950)} rounded-2xl`}>
+        <div className={`flex flex-col gap-4 py-10 px-5 mx-auto border border-${c(950)} rounded-2xl`}>
             {/* Header Section */}
             <div className="flex flex-row item-center gap-3">
                 <IoPersonOutline size={40} className="mt-1.5"/>
@@ -94,8 +94,8 @@ const ContactInfo = () => {
                 </div>
 
                 {/* cards */}
-                <div className="flex items-center justify-between gap-2 my-4">
-                    <div className="flex flex-col h-full rounded-lg items-center gap-0.5 border border-zinc-600 p-3.5">
+                <div className="flex flex-wrap items-center justify-between gap-2 my-4">
+                    <div className="flex flex-col h-full w-full rounded-lg items-center gap-0.5 border border-zinc-600 p-3.5">
                         <div className={`text-amber-400`}>
                             <MdOutlineDateRange size={32}/>
                         </div>
@@ -103,7 +103,7 @@ const ContactInfo = () => {
                         <span className="text-sm text-center text-zinc-500">Years Of Experience</span>
                     </div>
                     
-                    <div className="flex flex-col h-full rounded-lg items-center gap-0.5 border border-zinc-600 p-3.5">
+                    <div className="flex flex-col h-full w-full rounded-lg items-center gap-0.5 border border-zinc-600 p-3.5">
                         <div className="text-blue-300">
                             <FaRegBuilding size={32} />
                         </div>
@@ -111,7 +111,7 @@ const ContactInfo = () => {
                         <span className="text-sm text-center text-zinc-500">Company's Experience</span>
                     </div>
 
-                    <div className="flex flex-col h-full rounded-lg items-center gap-0.5 border border-zinc-600 p-3.5">
+                    <div className="flex flex-col h-full w-full rounded-lg items-center gap-0.5 border border-zinc-600 p-3.5">
                         <div className="text-purple-700">
                             <BsGraphUpArrow size={32} />
                         </div>
@@ -119,7 +119,7 @@ const ContactInfo = () => {
                         <span className="text-sm text-center text-zinc-500">Performance Improvement</span>
                     </div>
 
-                    <div className="flex flex-col h-full rounded-lg items-center gap-0.5 border border-zinc-600 p-3.5">
+                    <div className="flex flex-col h-full w-full rounded-lg items-center gap-0.5 border border-zinc-600 p-3.5">
                         <div className="text-green-400">
                             <GoShieldCheck size={32} />
                         </div>
