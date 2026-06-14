@@ -5,7 +5,7 @@ const ExperienceCard = ({exp, isLast}) => {
     const { c } = useColor();
 
     return(
-        <div className="flex gap-6 pl-1 md:pl-5 mx-auto w-11/12 sm:w-4/5 md:w-full">
+        <div className="flex gap-6 pl-1 md:pl-5 mx-auto w-full">
             {/* Side Section Line */}
             <div className="flex flex-col items-center">
                 <div className={`relative flex items-center justify-center w-5 h-5 rounded-full bg-${c(500)} ring-6 ring-${c(500)}/30 mt-2 shrink-0`}>

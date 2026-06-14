@@ -53,7 +53,7 @@ const HomePage = () => {
             <div className={`h-px w-full bg-linear-to-r from-transparent via-zinc-700 to-transparent`} />
 
             {/* Experience Section */}
-            <section id="experience" className="flex flex-col item-center justify-center py-20 w-full max-w-5xl mx-auto">
+            <section id="experience" className="flex flex-col item-center justify-center py-20 w-10/12 lg:w-full max-w-5xl mx-auto">
                 <SectionHeading number="03" heading="EXPERIENCE" />
                 {experiences.map((exp, index) => <ExperienceCard key={exp.id} exp={exp} isLast={index === experiences.length - 1} />)}
             </section>
