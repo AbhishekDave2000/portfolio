@@ -43,17 +43,17 @@ const ContactForm = () => {
     }
 
     return(
-        <div className={`bg-zinc-950 border border-${c(950)} md:col-span-1 backdrop-blur-2xl rounded-2xl py-6 px-6 lg:py-10 lg:px-10 my-5`}>
+        <div className={`bg-zinc-950 border border-${c(950)} md:col-span-1 backdrop-blur-2xl rounded-2xl pt-6 pb-2 px-6 lg:py-10 ld:px-10 my-5 md:my-0`}>
             
             {/* Header Section */}
             <div className='mb-10'>
                 <div className='flex gap-4'>
                     <div className={`h-14 w-14 flex items-start justify-center text-${c(400)} font-light`}>
-                        <MdOutlineMail size={`4vw`}/>
+                        <MdOutlineMail className='text-3xl lg:text-5xl mt-1.5'/>
                     </div>
 
                     <div>
-                        <h2 className="text-2xl lg:text-4xl font-light text-white">
+                        <h2 className="text-2xl lg:text-5xl font-light text-white">
                             Let's Work Together
                         </h2>
                         <div className="flex gap-2 items-center">
