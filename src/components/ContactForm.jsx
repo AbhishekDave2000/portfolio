@@ -47,13 +47,13 @@ const ContactForm = () => {
             
             {/* Header Section */}
             <div className='mb-10'>
-                <div className='flex gap-4'>
+                <div className='flex gap-1'>
                     <div className={`h-14 w-14 flex items-start justify-center text-${c(400)} font-light`}>
-                        <MdOutlineMail className='text-3xl lg:text-5xl mt-1.5'/>
+                        <MdOutlineMail className='text-2xl lg:text-4xl mt-1.5'/>
                     </div>
 
                     <div>
-                        <h2 className="text-2xl lg:text-5xl font-light text-white">
+                        <h2 className="text-xl lg:text-3xl font-light text-white">
                             Let's Work Together
                         </h2>
                         <div className="flex gap-2 items-center">

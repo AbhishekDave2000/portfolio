@@ -18,13 +18,13 @@ const ContactInfo = () => {
         <div className={`flex flex-col gap-4 py-10 px-5 mx-auto w-full md:col-span-1 border border-${c(950)} rounded-2xl`}>
             {/* Header Section */}
             <div className='mb-0 lg:mb-5'>
-                <div className='flex gap-4'>
+                <div className='flex gap-1'>
                     <div className={`h-14 w-14 flex items-start justify-center text-${c(400)} font-light`}>
-                        <IoPersonOutline className='text-2xl lg:text-5xl mt-1.5'/>
+                        <IoPersonOutline className='text-2xl lg:text-4xl mt-1.5'/>
                     </div>
 
                     <div>
-                        <h2 className="text-2xl lg:text-5xl font-light text-white">
+                        <h2 className="text-xl lg:text-3xl font-light text-white">
                             Let's Connect
                         </h2>
                         <div className="flex gap-2 items-center">
