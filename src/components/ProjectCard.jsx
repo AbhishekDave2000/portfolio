@@ -8,7 +8,7 @@ const ProjectCard = ({project, index}) => {
     const Icon = project.icon;
 
     return(
-        <div className={`flex flex-col bg-zinc-900/30 border border-${c(700)} rounded-xl overflow-hidden transition-all hover:-translate-y-1`}>
+        <div className={`flex flex-col w-10/12 md:w-full mx-auto bg-zinc-900/30 border border-${c(700)} rounded-xl overflow-hidden transition-all hover:-translate-y-1`}>
             {/* Top right image section */}
             <div className='h-36 bg-zinc-950 flex items-center justify-center relative border-b border-zinc-800'>
                 <Icon className={`text-${c(700)} text-5xl`} size={48} />

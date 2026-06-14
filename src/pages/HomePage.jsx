@@ -27,13 +27,13 @@ const HomePage = () => {
             <ScrollUpButton />
 
             {/* Hero Section */}
-            <section id="hero" className="flex flex-col items-start justify-center w-full max-w-5xl h-auto mx-auto tracking-wide px-5 py-20">
+            <section id="hero" className="flex flex-col items-start justify-center w-10/12 md:w-full mx-auto max-w-5xl h-auto tracking-wide px-0 md:px-5 py-20">
                 <HeroSection />
             </section>
             <div className={`h-px w-full bg-linear-to-r from-transparent via-zinc-700 to-transparent`} />
             
             {/* About Section */}
-            <section id="about" className="flex flex-col item-center justify-center w-full max-w-5xl mx-auto py-20">
+            <section id="about" className="flex flex-col item-center justify-center w-10/12 md:w-full max-w-5xl mx-auto py-20">
                 <SectionHeading number="01" heading="ABOUT ME" />
                 <AboutSection />
             </section>
