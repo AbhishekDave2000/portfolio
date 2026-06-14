@@ -60,7 +60,7 @@ const HomePage = () => {
             <div className={`h-px w-full bg-linear-to-r from-transparent via-zinc-700 to-transparent`} />
 
             {/* Project Section */}
-            <section id="projects" className="flex flex-col item-center justify-center py-20 w-full max-w-5xl mx-auto">
+            <section id="projects" className="flex flex-col item-center justify-center py-20 w-10/12 lg:w-full max-w-5xl mx-auto">
                 <SectionHeading number="04" heading="PROJECTS" />
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-stretch">
                     {projects.map((project, index) => <ProjectCard key={index} project={project} index={index} />)}
@@ -71,7 +71,7 @@ const HomePage = () => {
             {/* Education Section */}
             <section id="education" className="flex flex-col item-center justify-center py-20 w-full max-w-5xl mx-auto">
                 <SectionHeading number="05" heading="EDUCATION" />
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 mt-2 w-10/12 md:w-full mx-auto">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 mt-2 w-10/12 lg:w-full mx-auto">
                     {education.map( (edu, index) => <EducationCard key={index} edu={edu} />)}
                 </div>
             </section>
@@ -81,7 +81,7 @@ const HomePage = () => {
             <section id="contact" className="flex flex-col item-center justify-center py-20 w-full max-w-5xl mx-auto mb-5">
                 <SectionHeading number="06" heading="CONTACT" />
                 <div className="md:max-w-7xl md:mx-auto md:mt-5">
-                    <div className="md:grid md:grid-cols-2 md:gap-8">
+                    <div className="grid grid-cols-1 md:grid-cols-2 md:gap-8 w-10/12 lg:w-full mx-auto">
                         <ContactForm />
                         <ContactInfo />
                     </div>

@@ -43,17 +43,17 @@ const ContactForm = () => {
     }
 
     return(
-        <div className={`bg-zinc-950 border border-${c(950)} backdrop-blur-2xl rounded-2xl py-10 px-10 my-4 md:my-0`}>
+        <div className={`bg-zinc-950 border border-${c(950)} md:col-span-1 backdrop-blur-2xl rounded-2xl py-6 px-6 lg:py-10 lg:px-10 my-5`}>
             
             {/* Header Section */}
             <div className='mb-10'>
                 <div className='flex gap-4'>
-                    <div className={`h-14 w-14 flex items-center justify-center text-${c(400)} font-light`}>
-                        <MdOutlineMail size={50}/>
+                    <div className={`h-14 w-14 flex items-start justify-center text-${c(400)} font-light`}>
+                        <MdOutlineMail size={`4vw`}/>
                     </div>
 
                     <div>
-                        <h2 className="text-4xl font-light text-white">
+                        <h2 className="text-2xl lg:text-4xl font-light text-white">
                             Let's Work Together
                         </h2>
                         <div className="flex gap-2 items-center">
@@ -61,10 +61,10 @@ const ContactForm = () => {
                             <div className={`h-1 w-1 rounded-full bg-${c(500)}`}></div>
                         </div>
 
-                        <p className="text-zinc-400 mt-2">
+                        <p className="text-zinc-400 mt-2 text-sm lg:text-lg">
                             Have a project in mind or want to collaborate?
                         </p>
-                        <p className="text-zinc-400 mt-2">
+                        <p className="text-zinc-400 mt-2 text-sm lg:text-lg">
                             I'd love to hear from you.
                         </p>
                     </div>
@@ -73,53 +73,53 @@ const ContactForm = () => {
 
             {/* Form Section */}
             <div className='flex flex-col gap-1.5'>
-                <label className='text-zinc-400 col-span-1 text-lg font-light mt-2'>Name</label>
+                <label className='text-zinc-400 col-span-1 text-sm lg:text-lg font-light mt-2'>Name</label>
                 <input 
                     type="text" 
                     name="name"
                     value={form.name}
                     onChange={handleChange}
                     placeholder='Your Name'
-                    className='border border-zinc-800 rounded-lg text-zinc-400 col-span-3 w-full p-2 mb-5'
+                    className='border border-zinc-800 rounded-lg text-zinc-400 text-xs lg:text-lg col-span-3 w-full p-2 mb-5'
                 />
             </div>
 
             <div className='flex flex-col gap-1.5'>
-                <label className='text-zinc-400 col-span-1 text-lg font-light mt-2'>Email</label>
+                <label className='text-zinc-400 col-span-1 text-sm lg:text-lg font-light mt-2'>Email</label>
                 <input 
                     type="email" 
                     name="email"
                     value={form.email}
                     onChange={handleChange}
                     placeholder='Your Email'
-                    className='border border-zinc-800 rounded-lg text-zinc-400 col-span-3 w-full p-2 mb-5'
+                    className='border border-zinc-800 rounded-lg text-zinc-400 text-xs lg:text-lg col-span-3 w-full p-2 mb-5'
                 />
             </div>
 
             <div className='flex flex-col gap-1.5'>
-                <label className='text-zinc-400 col-span-1 text-lg font-light mt-2'>Subject</label>
+                <label className='text-zinc-400 col-span-1 text-sm lg:text-lg font-light mt-2'>Subject</label>
                 <input 
                     type="text" 
                     name="subject"
                     value={form.subject}
                     onChange={handleChange}
                     placeholder='Subject' 
-                    className='border border-zinc-800 rounded-lg text-zinc-400 col-span-3 w-full p-2 mb-5'
+                    className='border border-zinc-800 rounded-lg text-zinc-400 text-xs lg:text-lg col-span-3 w-full p-2 mb-5'
                 />
             </div>
 
             <div className='flex flex-col gap-1.5'>
-                <label className='text-zinc-400 col-span-1 text-lg font-light mt-2'>Message</label>
+                <label className='text-zinc-400 col-span-1 text-sm lg:text-lg font-light mt-2'>Message</label>
                 <textarea 
                     name="message" 
                     value={form.message}
                     onChange={handleChange}
                     placeholder='Your Message'
-                    className='border border-zinc-800 rounded-lg text-zinc-400 col-span-3 w-full p-2 mb-5'
+                    className='border border-zinc-800 rounded-lg text-zinc-400 text-xs lg:text-lg col-span-3 w-full p-2 mb-5'
                 />
             </div>
             <button 
-                className={`border border-${c(700)} text-zinc-400 hover:bg-${c(600)} hover:text-zinc-200 font-semibold text-xl rounded-xl mt-2 px-12 py-2 cursor-pointer`}
+                className={`border border-${c(700)} text-zinc-400 hover:bg-${c(600)} hover:text-zinc-200 font-semibold text-sm lg:text-xl rounded-xl mt-2 px-5 lg:px-12 py-1.5 lg:py-2 cursor-pointer`}
                 onClick={handleSubmit}>
                 {loading ? "Loading" : "Submit" }
             </button>
