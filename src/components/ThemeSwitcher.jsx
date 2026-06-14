@@ -11,7 +11,7 @@ const ThemeSwitcher = () => {
                 <button
                 key={color}
                 onClick={() => setColor(color)}
-                className={`w-5 h-5 rounded-full cursor-pointer border-2 transition-all
+                className={`w-4 h-4 md:w-5 md:h-5 rounded-full cursor-pointer border-2 transition-all
                             ${activeColor === color ? "scale-125 border-white" : "border-transparent"}
                             bg-${color}-500`}
                 />

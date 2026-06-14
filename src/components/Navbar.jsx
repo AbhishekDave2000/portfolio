@@ -25,8 +25,8 @@ const Navbar = () => {
     }
 
     return(
-        <div className={`bg-gray-950 relative flex md:item-center justify-between w-full h-18 overflow-visible sticky top-0 px-6 py-3 outline-none border-b-2 border-gray-900 z-10 ${menuOpen && 'h-dvh items-start'}`}>
-            <div className='flex flex-row items-center justify-between px-6 py-3 w-full'>
+        <div className={`bg-gray-950 relative flex md:item-center justify-between w-full h-18 overflow-visible md:sticky top-0 px-6 py-3 outline-none border-b-2 border-gray-900 z-10 ${menuOpen && 'h-dvh items-start'}`}>
+            <div className='flex flex-row items-center justify-between px-1 md:px-6 py-3 w-full'>
                 
                 <span onClick={() => handleClick("hero")} className={`text-2xl font-medium text-${c(400)} cursor-pointer`}>
                     AMD
