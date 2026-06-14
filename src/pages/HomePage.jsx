@@ -71,7 +71,7 @@ const HomePage = () => {
             {/* Education Section */}
             <section id="education" className="flex flex-col item-center justify-center py-20 w-full max-w-5xl mx-auto">
                 <SectionHeading number="05" heading="EDUCATION" />
-                <div className="flex flex-row flex-wrap justify-between gap-6 mt-2">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 mt-2 w-10/12 md:w-full mx-auto">
                     {education.map( (edu, index) => <EducationCard key={index} edu={edu} />)}
                 </div>
             </section>
