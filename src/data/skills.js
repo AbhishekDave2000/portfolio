@@ -1,7 +1,7 @@
 export const skills = {
     languages: [
-        "Ruby",
         "Javascript",
+        "Ruby",
         "Typescript",
         "SQL",
         "Python",
@@ -10,9 +10,9 @@ export const skills = {
     ],
 
     frameworks: [
-        "Ruby on Rails",
         "React.Js",
         "Node.Js",
+        "Ruby on Rails",
         "Express.Js",
         "ASP.NET",
         "JQUery",

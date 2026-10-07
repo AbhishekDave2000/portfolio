@@ -21,6 +21,8 @@ const HeroSection = () => {
                         2000,
                         'React Developer',
                         2000,
+                        'Node.JS Developer',
+                        2000,
                     ]}
                     speed={60}        
                     deletionSpeed={30} 

@@ -3,12 +3,12 @@ import SectionHeading from '../components/SectionHeading';
 import HeroSection from "../components/HeroSection";
 import AboutSection from "../components/AboutSection";
 import SkillsRow from "../components/SkillsRow";
-import ExperienceCard from "../components/ExperienceCard";
+// import ExperienceCard from "../components/ExperienceCard";
 import ContactForm from "../components/ContactForm";
 import ContactInfo from "../components/ContactInfo";
 import ProjectCard from "../components/ProjectCard";
 import { skills } from "../data/skills";
-import { experiences } from "../data/experience";
+// import { experiences } from "../data/experience";
 import { education } from "../data/education";
 import { projects } from "../data/project";
 import { BsJavascript } from "react-icons/bs";
@@ -53,11 +53,11 @@ const HomePage = () => {
             <div className={`h-px w-full bg-linear-to-r from-transparent via-zinc-700 to-transparent`} />
 
             {/* Experience Section */}
-            <section id="experience" className="flex flex-col item-center justify-center py-20 w-10/12 lg:w-full max-w-5xl mx-auto">
+            {/* <section id="experience" className="flex flex-col item-center justify-center py-20 w-10/12 lg:w-full max-w-5xl mx-auto">
                 <SectionHeading number="03" heading="EXPERIENCE" />
                 {experiences.map((exp, index) => <ExperienceCard key={exp.id} exp={exp} isLast={index === experiences.length - 1} />)}
             </section>
-            <div className={`h-px w-full bg-linear-to-r from-transparent via-zinc-700 to-transparent`} />
+            <div className={`h-px w-full bg-linear-to-r from-transparent via-zinc-700 to-transparent`} /> */}
 
             {/* Project Section */}
             <section id="projects" className="flex flex-col item-center justify-center py-20 w-10/12 lg:w-full max-w-5xl mx-auto">

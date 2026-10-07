@@ -14,7 +14,7 @@ const Navbar = () => {
 
     const NAV_ITEMS = [
         "hero", "about", "skills",
-        "experience", "projects",
+        "projects",
         "education", "contact"
     ]
 

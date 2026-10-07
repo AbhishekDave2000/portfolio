@@ -14,7 +14,7 @@ export const projects = [
     {
         title: "Helperland",
         description: "Developed a full-featured service booking platform with appointment scheduling, user and provider management, automated workflow orchestration, secure authentication, and real-time booking updates to streamline service operations and enhance user experience.",
-        tags: ["PHP", "MySQL", "Bootstrap"],
+        tags: ["PHP(MVC)", "MySQL", "Bootstrap", "jQuery", "AJAX"],
         github: "https://github.com/AbhishekDave2000/Halperhand",
         live: "https://abhishekdave2000.github.io/Halperhand/HTML/",
         icon: MdElectricBolt,
@@ -22,7 +22,7 @@ export const projects = [
     {
         title: "Voltup CRM",
         description: "Engineered a scalable EV charging ecosystem used by 10,000+ users, integrating automated business workflows, real-time inventory tracking, payment gateways, Redis graph-based data modeling, and high-performance PostgreSQL databases to support reliable production operations.",
-        tags: ["PHP", "MySQL", "Bootstrap"],
+        tags: ["Ruby on Rails", "React", "PostgreSQL", "Redis", "REST"],
         github: "",
         live: "https://www.voltup.in/",
         icon: FaHome,

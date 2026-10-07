@@ -13,9 +13,7 @@ const AboutSection = () => {
             <div className="mx-auto basis-full md:basis-3/5">
                 <h2 className={`text-${c(200)} text-3xl md:text-5xl py-2`}>Who I Am</h2>
                 <div className="font-light text-md md:text-2xl">
-                    Full-stack Ruby on Rails Developer with 3+ years building cloud-native, scalable web applications in Agile/DevOps environments.
-                    Proven experience delivering production Rails services with CI/CD pipelines, Redis, PostgreSQL, and RESTful APIs. Comfortable
-                    owning features end-to-end across iterative sprints.
+                    Full-stack Engineer with 3+ years of experience across React, TypeScript, Node.js, Express.js, and Ruby on Rails, delivering scalable web applications and RESTful APIs in cloud-native, Agile environments. Collaborated closely with cross-functional teams to translate ambiguous requirements into reliable, well-documented solutions, owning features end-to-end across iterative sprints.
                 </div>
             </div>
 
